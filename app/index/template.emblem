@@ -1,0 +1,7 @@
+.login-box
+	form
+		.form-group
+			= input class="form-control" type="text" placeholder="Email" value=email
+		.form-group
+			= input class="form-control" type="password" placeholder="Password" value=password
+		button.btn.btn-primary click="loginClick" Login
