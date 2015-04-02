@@ -1,1 +1,2 @@
-|loading
+.center-spinner
+	i.fa-4x.fa-spinner.fa-spin

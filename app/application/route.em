@@ -2,7 +2,15 @@ class ApplicationRoute extends Ember.Route
 
 	beforeModel: -> 
 		if localStorage.gpsmytruckToken
-			@session.openWithToken(localStorage.gpsmytruckToken)
+			@session.openWithToken(localStorage.gpsmytruckToken).then(
+				(success) =>
+					@sessionSuccessHandler()
+				(error) =>
+					@sessionSuccessHandler()
+			)
+
+	sessionSuccessHandler: ->
+		@transitionTo 'index'
 
 	actions:
 		login: (user) -> 
@@ -27,9 +35,9 @@ class ApplicationRoute extends Ember.Route
 					(success) => @notify.warning model.modelName + " saved."
 					(errors) => @send 'errors', errors.errors
 				)
-
 		errors: (errors) -> 
-			for prop,array of errors
-				@notify.warning message for message in array
+			for prop,messages of errors
+				@notify.warning message for message in messages
+
 
 `export default ApplicationRoute`

@@ -1,0 +1,31 @@
+if session.loggedIn
+
+	nav.navbar.navbar-fixed-top.navbar-inverse
+		.container
+			.navbar-header
+				button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				link-to "index" class='navbar-brand'
+					i.fa-truck 
+					|&nbsp;GPSMyTruck Admin
+
+			.collapse.navbar-collapse#bs-example-navbar-collapse-1
+				ul.nav.navbar-nav.navbar-right
+					li.dropdown
+						a.dropdown-toggle href="#" data-toggle="dropdown" 
+							i.fa-plus
+							|&nbsp;Add Customer
+						.dropdown-menu
+							form
+								.form-group
+									= input class="form-control" type="text" placeholder="Company Name" value=name
+								button.btn.btn-primary click="addCompany" Add
+
+.container
+	.row
+		outlet
+
+ember-notify messageStyle='bootstrap'
