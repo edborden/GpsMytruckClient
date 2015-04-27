@@ -24,8 +24,6 @@ if session.loggedIn
 									= input class="form-control" type="text" placeholder="Company Name" value=name
 								button.btn.btn-primary click="addCompany" Add
 
-.container
-	.row
-		outlet
+outlet
 
 ember-notify messageStyle='bootstrap'

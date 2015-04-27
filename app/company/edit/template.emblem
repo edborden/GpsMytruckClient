@@ -1,0 +1,16 @@
+form
+	.form-group
+		label for="a" Name
+		= input type="text" value=model.name id="a" class="form-control"
+	.form-group
+		label for="towbook" Towbook forwarding?
+		br
+		= input type="checkbox" checked=model.towbook id="towbook"
+	.form-group
+		label for="audit" Audit export?
+		br
+		= input type="checkbox" checked=model.audit id="audit"
+	.form-group
+		button.btn.btn-primary.btn-sm click="'saveModel' model"
+			i.fa-save
+			|&nbsp;&nbsp;Save

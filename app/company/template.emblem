@@ -1,0 +1,13 @@
+.container
+	.row.row-spacer		
+		.col-md-2	
+			ul.list-group
+				li.list-group-item.list-group-item-success
+					= model.name
+					|&nbsp;Admin
+				link-to 'company.index' class="list-group-item" |Devices
+				link-to 'company.device' class="list-group-item" |Add Device
+				link-to 'company.edit' class="list-group-item" |Edit Info
+
+		.col-md-10
+			outlet

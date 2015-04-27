@@ -6,7 +6,7 @@ class ApplicationController extends Ember.Controller with EmberValidations.Mixin
 		addCompany: ->
 			if @isValid
 				company = @store.createRecord 'company',{name:@name,user:@session.me}
-				@send 'save', company
+				@send 'saveModel', company
 				@name = null
 			else
 				@send 'errors',{name:@errors.name}

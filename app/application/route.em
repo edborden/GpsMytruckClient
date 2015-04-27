@@ -11,10 +11,10 @@ class ApplicationRoute extends Ember.Route
 
 	sessionSuccessHandler: ->
 		@transitionTo 'index'
+		@session.notifyPropertyChange 'loggedIn' #shouldn't have to do this, loggedIn should update on its own. Only on @openWithToken
 
 	actions:
 		login: (user) -> 
-			console.log 'login'
 			@transitionTo 'loading'
 			@session.openWithUser(user).then(
 				(success) =>
@@ -29,7 +29,7 @@ class ApplicationRoute extends Ember.Route
 			@session.close().then => 
 				@transitionTo 'index'
 				@notify.warning "Logged out successfully."
-		save: (model) ->
+		saveModel: (model) ->
 			if model.isDirty
 				model.save().then(
 					(success) => @notify.warning model.modelName + " saved."
@@ -39,5 +39,10 @@ class ApplicationRoute extends Ember.Route
 			for prop,messages of errors
 				@notify.warning message for message in messages
 
+		destroyModel: (model) ->
+			model.destroyRecord().then(
+					(success) => @notify.warning model.modelName + " deleted."
+					(errors) => @send 'errors', errors.errors
+			)
 
 `export default ApplicationRoute`

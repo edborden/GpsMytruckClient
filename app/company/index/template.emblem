@@ -1,0 +1,6 @@
+ul.row.list-group
+	each device in model.devices
+		li.list-group-item.col-lg-5.device-box
+			= device.hardwareId
+			|&nbsp;&nbsp;
+			i.red.fa-close click="'destroyModel' device"
