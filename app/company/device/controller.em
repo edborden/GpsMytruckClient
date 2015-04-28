@@ -10,6 +10,7 @@ class CompanyDeviceController extends Ember.Controller with EmberValidations.Mix
 				@transitionToRoute 'company',@model
 			else
 				@send 'errors',{hardwareId:@errors.hardwareId}
+			@hardwareId = null
 	
 	validations:
 		hardwareId: 

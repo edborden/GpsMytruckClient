@@ -1,5 +1,6 @@
 class SessionService extends Ember.Object
 
+	store: Ember.inject.service()
 	loggedIn: ~> @model?
 	model: null
 	token: ~> if @model? then @model.token else null

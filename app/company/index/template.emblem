@@ -4,3 +4,7 @@ ul.row.list-group
 			= device.hardwareId
 			|&nbsp;&nbsp;
 			i.red.fa-close click="'destroyModel' device"
+			if model.audit
+				|&nbsp;&nbsp;
+				a href=device.auditLink
+					i.fa-file-excel-o

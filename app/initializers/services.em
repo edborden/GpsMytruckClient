@@ -9,9 +9,6 @@ initializer =
 		application.register 'service:session', SessionService, {singleton: true}
 		services = ['session']
 
-		#Setup service objects
-		application.inject 'service:session', 'store', 'store:main'
-
 		#Inject into app factories
 		['controller','route','adapter'].forEach (type) ->
 			services.forEach (service) ->
