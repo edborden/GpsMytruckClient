@@ -11,6 +11,7 @@ class CompanyDeviceController extends Ember.Controller with EmberValidations.Mix
 			else
 				@send 'errors',{hardwareId:@errors.hardwareId}
 			@hardwareId = null
+			@truckId = null
 	
 	validations:
 		hardwareId: 

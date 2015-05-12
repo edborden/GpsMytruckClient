@@ -4,10 +4,7 @@ if session.loggedIn
 		.container
 			.navbar-header
 				button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
+					i.fa-bars.fa-2x
 				link-to "index" class='navbar-brand'
 					i.fa-truck 
 					|&nbsp;GPSMyTruck Admin

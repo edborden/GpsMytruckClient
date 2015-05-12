@@ -11,6 +11,10 @@ form
 		br
 		= input type="checkbox" checked=model.audit id="audit"
 	.form-group
-		button.btn.btn-primary.btn-sm click="'saveModel' model"
+		button.btn.btn-primary.btn-sm click="saveClicked"
 			i.fa-save
 			|&nbsp;&nbsp;Save
+	.form-group
+		button.btn.btn-danger.btn-sm click="deleteClicked"
+			i.fa-trash
+			|&nbsp;&nbsp;Delete
