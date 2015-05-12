@@ -16,6 +16,8 @@ ul.row.list-group
 				|(Truck&nbsp;
 				= device.truckId
 				|)&nbsp;&nbsp;
+				if model.audit
+					span.badge = device.locationsCount
 			i.red.fa-close click="'destroyModel' device"
 			if model.audit
 				if isValid
