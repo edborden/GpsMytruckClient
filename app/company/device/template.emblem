@@ -2,7 +2,9 @@ ul.list-group
 	li.list-group-item
 		form
 			.form-group
-				= input type="text" value=hardwareId placeholder="Hardware ID" class="form-control"
+				= input value=hardwareId placeholder="Hardware ID" class="form-control"
+			.form-group
+				= input value=truckId placeholder="Truck ID" class="form-control"
 			.form-group
 				button.btn.btn-primary.btn-sm click="save"
 					i.fa-save

@@ -5,7 +5,7 @@ class CompanyDeviceController extends Ember.Controller with EmberValidations.Mix
 	actions:
 		save: ->
 			if @isValid
-				device = @store.createRecord 'device',{hardwareId:@hardwareId,company:@model}
+				device = @store.createRecord 'device',{hardwareId:@hardwareId,company:@model,truckId:@truckId}
 				@send 'saveModel',device
 				@transitionToRoute 'company',@model
 			else

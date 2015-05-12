@@ -3,6 +3,11 @@ ul.row.list-group
 		li.list-group-item.col-lg-5.device-box
 			= device.hardwareId
 			|&nbsp;&nbsp;
+			if device.truckId
+				|&nbsp;&nbsp;
+				|(Truck&nbsp;
+				= device.truckId
+				|)&nbsp;&nbsp;
 			i.red.fa-close click="'destroyModel' device"
 			if model.audit
 				|&nbsp;&nbsp;
