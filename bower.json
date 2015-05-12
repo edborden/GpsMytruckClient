@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "bootstrap": "*",
-    "components-font-awesome": "*"    
+    "components-font-awesome": "*",
+    "bootstrap-datepicker": "~1.4.0"
   }
 }

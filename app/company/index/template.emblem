@@ -1,4 +1,12 @@
 ul.row.list-group
+
+	if model.audit
+		li.list-group-item.list-group-item-success.col-lg-10.date-pickers
+			|Audit export date range:&nbsp;&nbsp;
+			bootstrap-datepicker value=startRaw placeholder="Start Date" class="date-picker form-control" autoclose=true
+			|&nbsp;&nbsp;
+			bootstrap-datepicker value=endRaw placeholder="End Date" class="date-picker form-control" autoclose=true
+
 	each device in model.devices
 		li.list-group-item.col-lg-5.device-box
 			= device.hardwareId
@@ -10,6 +18,7 @@ ul.row.list-group
 				|)&nbsp;&nbsp;
 			i.red.fa-close click="'destroyModel' device"
 			if model.audit
-				|&nbsp;&nbsp;
-				a href=device.auditLink
-					i.fa-file-excel-o
+				if isValid
+					|&nbsp;&nbsp;
+					audit-link device=device start=start end=end
+						i.fa-file-excel-o

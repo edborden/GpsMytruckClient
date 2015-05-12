@@ -38,6 +38,7 @@
     "broccoli-merge-trees": "*",
     "broccoli-static-compiler": "*",
     "ember-notify": "*",
-    "ember-validations": "*"
+    "ember-validations": "*",
+    "ember-cli-bootstrap-datepicker":"*"
   }
 }

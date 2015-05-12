@@ -9,6 +9,6 @@ class Device extends DS.Model
 	truckId:attr()
 	company: DS.belongsTo 'company'
 	modelName: "Device"	
-	auditLink: ~> config.apiHostName+'/devices/'+@id+'/locations.csv?token='+@session.token
+	auditLink: ~> "#{config.apiHostName}/devices/#{@id}/locations.csv?token=#{@session.token}"
 
 `export default Device`
