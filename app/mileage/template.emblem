@@ -1,0 +1,25 @@
+.container
+	.row
+		.login-box
+
+			.title
+				i.fa-truck
+				|&nbsp;
+				= session.me.name
+				|&nbsp;Mileage Reports
+
+			p: x-select content=session.me.devices selection=selectedTruck optionValuePath="content.id" optionLabelPath="content.truckId" placeholder="Select Truck" disabled=loading
+
+			p: bootstrap-datepicker value=startRaw placeholder="Start Date" class="date-picker form-control" autoclose=true disabled=loading
+
+			p: bootstrap-datepicker value=endRaw placeholder="End Date" class="date-picker form-control" autoclose=true disabled=loading	
+			
+			if isValid
+				button.btn.btn-primary click="reportClick" disabled=loading
+					unless loading
+						i.fa-cloud
+						|&nbsp;Get Report
+					else
+						i.fa-cog.fa-spin
+						|&nbsp;&nbsp;Working...
+			h3.text-center = result

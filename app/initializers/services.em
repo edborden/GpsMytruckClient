@@ -1,12 +1,7 @@
-`import SessionService from 'gps-mytruck-client/services/session'`
-
 initializer =
-	name:'services'
-	after: 'store'
+
 	initialize: (container,application) ->
 
-		#Register service objects
-		application.register 'service:session', SessionService, {singleton: true}
 		services = ['session']
 
 		#Inject into app factories

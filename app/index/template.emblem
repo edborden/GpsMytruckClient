@@ -1,3 +1,8 @@
+unless session.loggedIn
+	unless adminLogin
+		.admin-button 
+			a click="adminClick" Admin	
+
 .container
 	.row
 		if session.loggedIn
@@ -8,10 +13,23 @@
 		else
 			.login-box
 				form
-					.form-group
-						= input class="form-control" type="text" placeholder="Email" value=email
-					.form-group
-						= input class="form-control" type="password" placeholder="Password" value=password
-					button.btn.btn-primary click="loginClick" 
-						i.fa-sign-in
-						|&nbsp;Login
+					if adminLogin
+						.title
+							i.fa-truck 
+							|&nbsp;GPSMyTruck Admin
+						.form-group
+							= input class="form-control" type="text" placeholder="UserName" value=email
+						.form-group
+							= input class="form-control" type="password" placeholder="Password" value=password
+						button.btn.btn-primary click="loginClick" 
+							i.fa-sign-in
+							|&nbsp;Login
+					else
+						.title
+							i.fa-truck 
+							|&nbsp;GPSMyTruck Mileage
+						.form-group
+							= input class="form-control" type="text" placeholder="Company Name" value=companyName
+						button.btn.btn-primary click="loginClick" 
+							i.fa-sign-in
+							|&nbsp;Login	

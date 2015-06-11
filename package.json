@@ -39,6 +39,7 @@
     "broccoli-static-compiler": "*",
     "ember-notify": "*",
     "ember-validations": "*",
-    "ember-cli-bootstrap-datepicker":"*"
+    "ember-cli-bootstrap-datepicker":"*",
+    "emberx-select": "1.1.2"
   }
 }

@@ -6,10 +6,6 @@ class CompanyIndexController extends Ember.Controller with EmberValidations.Mixi
 	endRaw:null
 	start: ~> @startRaw.toISOString() if @startRaw?
 	end: ~> @endRaw.toISOString() if @endRaw?
-
-	actions:
-		errors: ->
-			@send 'errors',{startRaw:@errors.startRaw,endRaw:@errors.endRaw}
 	
 	validations:
 		startRaw: 

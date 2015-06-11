@@ -10,7 +10,6 @@ class ApplicationRoute extends Ember.Route
 			)
 
 	sessionSuccessHandler: ->
-		@transitionTo 'index'
 		@session.notifyPropertyChange 'loggedIn' #shouldn't have to do this, loggedIn should update on its own. Only on @openWithToken
 
 	actions:

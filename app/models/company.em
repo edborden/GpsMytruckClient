@@ -1,10 +1,13 @@
-attr = DS.attr
+`import ModelName from 'gps-mytruck-client/mixins/model-name'`
 
-class Company extends DS.Model
+attr = DS.attr
+belongsTo = DS.belongsTo
+hasMany = DS.hasMany
+
+class Company extends DS.Model with ModelName
 	name:attr()
-	user: DS.belongsTo 'user'
-	modelName: "Company"
-	devices: DS.hasMany 'device'
+	user: belongsTo 'user'
+	devices: hasMany 'device'
 	towbook: attr 'boolean'
 	audit: attr 'boolean'
 

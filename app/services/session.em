@@ -1,10 +1,10 @@
-class SessionService extends Ember.Object
+class SessionService extends Ember.Service
 
 	store: Ember.inject.service()
 	loggedIn: ~> @model?
 	model: null
 	token: ~> if @model? then @model.token else null
-	me: ~> @model.user
+	me: ~> @model.user or @model.company
 	
 	openWithUser: (user) ->
 		return new Ember.RSVP.Promise (resolve,reject) =>

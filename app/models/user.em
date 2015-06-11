@@ -1,8 +1,12 @@
-attr = DS.attr
+`import ModelName from 'gps-mytruck-client/mixins/model-name'`
 
-class User extends DS.Model
+attr = DS.attr
+belongsTo = DS.belongsTo
+hasMany = DS.hasMany
+
+class User extends DS.Model with ModelName
 	email: attr()
 	password: attr()
-	companies: DS.hasMany 'company'
+	companies: hasMany 'company'
 
 `export default User`

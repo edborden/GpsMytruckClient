@@ -1,25 +1,25 @@
 if session.loggedIn
+	if session.me.isUser
+		nav.navbar.navbar-fixed-top.navbar-inverse
+			.container
+				.navbar-header
+					button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						i.fa-bars.fa-2x
+					link-to "index" class='navbar-brand'
+						i.fa-truck 
+						|&nbsp;GPSMyTruck Admin
 
-	nav.navbar.navbar-fixed-top.navbar-inverse
-		.container
-			.navbar-header
-				button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					i.fa-bars.fa-2x
-				link-to "index" class='navbar-brand'
-					i.fa-truck 
-					|&nbsp;GPSMyTruck Admin
-
-			.collapse.navbar-collapse#bs-example-navbar-collapse-1
-				ul.nav.navbar-nav.navbar-right
-					li.dropdown
-						a.dropdown-toggle href="#" data-toggle="dropdown" 
-							i.fa-plus
-							|&nbsp;Add Customer
-						.dropdown-menu
-							form
-								.form-group
-									= input class="form-control" type="text" placeholder="Company Name" value=name
-								button.btn.btn-primary click="addCompany" Add
+				.collapse.navbar-collapse#bs-example-navbar-collapse-1
+					ul.nav.navbar-nav.navbar-right
+						li.dropdown
+							a.dropdown-toggle href="#" data-toggle="dropdown" 
+								i.fa-plus
+								|&nbsp;Add Customer
+							.dropdown-menu
+								form
+									.form-group
+										= input class="form-control" type="text" placeholder="Company Name" value=name
+									button.btn.btn-primary click="addCompany" Add
 
 outlet
 

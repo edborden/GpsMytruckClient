@@ -7,5 +7,6 @@ Router.map ->
 	@route 'company', {path: 'company/:company_id'}, ->
 		@route 'edit'
 		@route 'device'
+	@route 'mileage'
 
 `export default Router`
