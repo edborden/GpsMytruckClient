@@ -13,5 +13,6 @@ class Device extends DS.Model with ModelName
 	company: belongsTo 'company'
 	auditLink: ~> "#{config.apiHostName}/devices/#{@id}/locations.csv?token=#{@session.token}"
 	locationsCount: attr 'number'
+	name: ~> @truckId or @hardwareId
 
 `export default Device`

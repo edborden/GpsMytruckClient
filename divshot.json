@@ -1,6 +1,9 @@
 {
   "name": "gpsmytruck",
   "root": "dist",
-  "clean_urls": false,
-  "error_page": "error.html"
+  "routes": {
+    "/tests": "tests/index.html",
+    "/tests/**": "tests/index.html",
+    "/**": "index.html"
+  }
 }
