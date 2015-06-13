@@ -9,7 +9,8 @@ ul.row.list-group
 
 	each device in model.devices
 		li.list-group-item.col-lg-5.device-box
-			= device.hardwareId
+			link-to 'company.device.edit' device
+				= device.hardwareId
 			|&nbsp;&nbsp;
 			if device.truckId
 				|&nbsp;&nbsp;

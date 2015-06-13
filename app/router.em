@@ -6,7 +6,9 @@ class Router extends Ember.Router
 Router.map ->
 	@route 'company', {path: 'company/:company_id'}, ->
 		@route 'edit'
-		@route 'device'
+		@route 'device', ->
+			@route 'new'
+			@route 'edit', {path: 'edit/:device_id'}
 	@route 'mileage'
 
 `export default Router`

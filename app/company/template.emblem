@@ -6,7 +6,7 @@
 					= model.name
 					|&nbsp;Admin
 				link-to 'company.index' class="list-group-item" |Devices
-				link-to 'company.device' class="list-group-item" |Add Device
+				link-to 'company.device.new' class="list-group-item" |Add Device
 				link-to 'company.edit' class="list-group-item" |Edit Info
 
 		.col-md-10

@@ -1,0 +1,10 @@
+ul.list-group
+	li.list-group-item
+		form
+			.form-group
+				p Edit Truck ID:
+				= input value=model.truckId placeholder="Truck ID" class="form-control"
+			.form-group
+				button.btn.btn-primary.btn-sm click="save"
+					i.fa-save
+					|&nbsp;&nbsp;Save
