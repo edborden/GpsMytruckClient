@@ -6,11 +6,15 @@ form
 		label for="a" Email
 		= input type="text" value=model.email id="email" class="form-control"
 	.form-group
-		label for="towbook" Towbook forwarding?
+		label for="daily" Daily Report
+		br
+		= input type="checkbox" checked=model.dailyReport id="daily"
+	.form-group
+		label for="towbook" Towbook forwarding
 		br
 		= input type="checkbox" checked=model.towbook id="towbook"
 	.form-group
-		label for="audit" Audit export?
+		label for="audit" Audit export
 		br
 		= input type="checkbox" checked=model.audit id="audit"
 	.form-group

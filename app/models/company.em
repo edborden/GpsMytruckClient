@@ -12,6 +12,7 @@ class Company extends DS.Model with ModelName
   towbook: attr 'boolean'
   audit: attr 'boolean'
   email: attr "string"
+  dailyReport: attr "boolean"
 
   ## ASSOCIATIONS
 
