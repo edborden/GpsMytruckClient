@@ -16,6 +16,11 @@ module.exports = function(defaults) {
 		destDir: '/fonts'
 	});
 
+	// Messenger
+	app.import('bower_components/messenger/build/js/messenger.js');
+	app.import('bower_components/messenger/build/css/messenger.css');
+	app.import('bower_components/messenger/build/css/messenger-theme-ice.css');
+
 	// Bootstrap
 	app.import('bower_components/bootstrap/js/dropdown.js');
 	app.import('bower_components/bootstrap/js/collapse.js');

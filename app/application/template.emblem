@@ -22,5 +22,3 @@ if session.loggedIn
 									button.btn.btn-primary click="addCompany" Add
 
 outlet
-
-ember-notify messageStyle='bootstrap'
