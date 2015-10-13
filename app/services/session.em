@@ -22,7 +22,7 @@ class SessionService extends Ember.Service
 
 	openWithToken: (token) ->
 		return new Ember.RSVP.Promise (resolve,reject) =>
-			@store.find('session', {token:token}).then( 
+			@store.query('session', {token:token}).then( 
 				(response) => 
 					@openWithSession response.firstObject
 					resolve()

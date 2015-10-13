@@ -5,8 +5,14 @@ belongsTo = DS.belongsTo
 hasMany = DS.hasMany
 
 class User extends DS.Model with ModelName
-	email: attr()
-	password: attr()
-	companies: hasMany 'company'
+
+  ## ATTRIBUTES
+
+  email: attr "string"
+  password: attr "string"
+
+  ## ASSOCIATIONS
+  
+  companies: hasMany 'company', {async:false}
 
 `export default User`

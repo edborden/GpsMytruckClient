@@ -1,12 +1,20 @@
 attr = DS.attr
+belongsTo = DS.belongsTo
+hasMany = DS.hasMany
 
 class Session extends DS.Model
-	token: attr()
-	user: DS.belongsTo 'user'
-	company: DS.belongsTo 'company'
 
-	companyName: attr()
-	email: attr()
-	password: attr()
+  ## ATTRIBUTES
+
+  token: attr "string"
+  companyName: attr "string"
+  email: attr "string"
+  password: attr "string"
+
+  ## ASSOCIATIONS
+
+  user: belongsTo 'user', {async:false}
+  company: belongsTo 'company', {async:false}
+
 
 `export default Session`

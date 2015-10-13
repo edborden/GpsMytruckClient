@@ -5,10 +5,16 @@ belongsTo = DS.belongsTo
 hasMany = DS.hasMany
 
 class Company extends DS.Model with ModelName
-	name:attr()
-	user: belongsTo 'user'
-	devices: hasMany 'device'
-	towbook: attr 'boolean'
-	audit: attr 'boolean'
+
+  ## ATTRIBUTES
+
+  name: attr "string"
+  towbook: attr 'boolean'
+  audit: attr 'boolean'
+
+  ## ASSOCIATIONS
+
+  user: belongsTo 'user', {async:false}
+  devices: hasMany 'device', {async:false}
 
 `export default Company`

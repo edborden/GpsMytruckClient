@@ -5,14 +5,26 @@ attr = DS.attr
 belongsTo = DS.belongsTo
 hasMany = DS.hasMany
 
+service = Ember.inject.service
+computed = Ember.computed
+
 class Device extends DS.Model with ModelName
 
-	session: Ember.inject.service()
-	hardwareId:attr()
-	truckId:attr()
-	company: belongsTo 'company'
-	auditLink: ~> "#{config.apiHostName}/devices/#{@id}/locations.csv?token=#{@session.token}"
-	locationsCount: attr 'number'
-	name: ~> @truckId or @hardwareId
+  session: service()
+
+  ## ATTRIBUTES
+
+  hardwareId: attr "string"
+  truckId: attr "string"
+  locationsCount: attr 'number'
+
+  ## ASSOCIATIONS
+
+  company: belongsTo 'company', {async:false}
+
+  ## COMPUTED
+
+  auditLink: computed -> "#{config.apiHostName}/devices/#{@id}/locations.csv?token=#{@session.token}"
+  name: computed -> @truckId or @hardwareId
 
 `export default Device`
