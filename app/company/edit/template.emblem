@@ -1,7 +1,10 @@
 form
 	.form-group
 		label for="a" Name
-		= input type="text" value=model.name id="a" class="form-control"
+		= input type="text" value=model.name id="name" class="form-control"
+	.form-group
+		label for="a" Email
+		= input type="text" value=model.email id="email" class="form-control"
 	.form-group
 		label for="towbook" Towbook forwarding?
 		br
