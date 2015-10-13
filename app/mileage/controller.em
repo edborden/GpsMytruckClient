@@ -1,7 +1,7 @@
 `import EmberValidations from 'ember-validations'`
 `import ServerTalk from 'gps-mytruck-client/mixins/server-talk'`
 
-class MileageController extends Ember.Controller with EmberValidations.Mixin, ServerTalk
+class MileageController extends Ember.Controller with EmberValidations, ServerTalk
 
 	selectedTruck:null
 

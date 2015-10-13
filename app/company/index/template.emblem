@@ -7,7 +7,7 @@ ul.row.list-group
 			|&nbsp;&nbsp;
 			bootstrap-datepicker value=endRaw placeholder="End Date" class="date-picker form-control" autoclose=true
 
-	each device in model.devices
+	each model.devices as |device|
 		li.list-group-item.col-lg-5.device-box
 			link-to 'company.device.edit' device
 				= device.hardwareId

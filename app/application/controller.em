@@ -1,6 +1,6 @@
 `import EmberValidations from 'ember-validations'`
 
-class ApplicationController extends Ember.Controller with EmberValidations.Mixin
+class ApplicationController extends Ember.Controller with EmberValidations
 
 	actions:
 		addCompany: ->

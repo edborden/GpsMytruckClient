@@ -6,7 +6,7 @@ unless session.loggedIn
 .container
 	.row
 		if session.loggedIn
-			each company in session.me.companies
+			each session.me.companies as |company|
 				.col-md-6
 					link-to 'company' company
 						h3 = company.name
