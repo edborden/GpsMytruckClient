@@ -2,6 +2,15 @@
 @import "bower_components/components-font-awesome/less/font-awesome";
 
 html, body, body>div.ember-view {height: 100%}
+.click-fix {cursor: pointer}
+
+.bordered {
+    border: 2px solid black;
+    padding:2px;
+    margin-right:10px;
+    border-radius:6px;
+    input {margin-top:6px}
+}
 
 .admin-button {
     position:absolute;
@@ -41,7 +50,8 @@ i {.fa}
     margin:3px;
 }
 
-.red {color:red}
+.red {color:red;border-color:red}
+.green {color:green;border-color:green}
 
 .dropdown-menu {
     padding:15px;

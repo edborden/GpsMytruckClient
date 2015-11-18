@@ -17,6 +17,7 @@ class Device extends DS.Model with ModelName
   hardwareId: attr "string"
   truckId: attr "string"
   locationsCount: attr 'number'
+  hos: attr 'boolean'
 
   ## ASSOCIATIONS
 
