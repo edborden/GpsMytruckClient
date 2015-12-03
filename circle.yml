@@ -4,7 +4,7 @@ machine:
 dependencies:
   pre:
     - npm install -g bower
-    - npm install -g divshot-cli
+    - npm install -g firebase-tools
     - npm install -g ember-cli
   override:
     - npm i
