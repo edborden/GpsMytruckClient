@@ -17,4 +17,4 @@ deployment:
     branch: master
     commands:
       - ember build --environment=production
-      - divshot push production --token $DIVSHOT_TOKEN
+      - firebase deploy --token $FIREBASE_TOKEN

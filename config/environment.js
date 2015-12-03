@@ -32,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHostName = 'http://gpsmytruck.herokuapp.com'
+    ENV.apiHostName = 'https://api.gpsmytruck.com'
   }
 
   return ENV;
