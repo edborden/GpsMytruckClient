@@ -44,6 +44,6 @@
     "broccoli-funnel": "0.2.8",     
     "ember-validations": "git+https://github.com/dockyard/ember-validations.git#ef9f6eb495aaaf27069d7c62f406d30596e1ddcc",
     "ember-cli-bootstrap-datepicker":"*",
-    "emberx-select": "2.0.1"
+    "emberx-select": "1.1.4"
   }
 }
