@@ -8,7 +8,7 @@
 				= session.me.name
 				|&nbsp;Mileage Reports
 
-			p: x-select content=session.me.devices selection=selectedTruck optionValuePath="content.id" optionLabelPath="content.name" placeholder="Select Truck" disabled=loading
+			p: x-select content=session.me.devices value=selectedTruck optionValuePath="content.id" optionLabelPath="content.name" placeholder="Select Truck" disabled=loading
 
 			p: bootstrap-datepicker value=startRaw placeholder="Start Date" class="date-picker form-control" autoclose=true disabled=loading
 
