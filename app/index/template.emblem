@@ -32,4 +32,7 @@ unless session.loggedIn
 							= input class="form-control" type="text" placeholder="Company Name" value=companyName
 						button.btn.btn-primary click="loginClick" 
 							i.fa-sign-in
-							|&nbsp;Login	
+							|&nbsp;Login
+	if session.loggedIn
+		.row
+			iframe width="100%" height="600px" src="https://demo2016.scriptrapps.io/numerexServiceLive/html/map.html"
