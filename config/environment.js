@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    apiHostName: 'http://localhost:3000',
+    apiHostName: 'https://gpsmytruck.herokuapp.com',
     APP: {},
     EmberENV: {FEATURES: {}}
   };
@@ -32,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHostName = 'https://api.gpsmytruck.com'
+    ENV.apiHostName = 'https://gpsmytruck.herokuapp.com'
   }
 
   return ENV;
